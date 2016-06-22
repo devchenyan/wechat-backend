@@ -2,10 +2,10 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>tv.caratech</groupId>
-  <artifactId>wechat_backend</artifactId>
+  <artifactId>WechatBackend</artifactId>
   <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
-  <name>wechat_backend Maven Webapp</name>
+  <name>WechatBackend Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
@@ -42,6 +42,6 @@
     </dependency>
   </dependencies>
   <build>
-    <finalName>wechat_backend</finalName>
+    <finalName>WechatBackend</finalName>
   </build>
 </project>
