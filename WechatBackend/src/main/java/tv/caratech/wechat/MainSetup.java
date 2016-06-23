@@ -6,6 +6,7 @@ import org.nutz.ioc.Ioc;
 import org.nutz.mvc.NutConfig;
 import org.nutz.mvc.Setup;
 
+import tv.caratech.wechat.bean.Contact;
 import tv.caratech.wechat.bean.User;
 
 public class MainSetup implements Setup{
@@ -19,8 +20,16 @@ public class MainSetup implements Setup{
             User user = new User();
             user.setName("admin");
             user.setPassword("123456");
-            
             dao.insert(user);
+            
+            user.setName("one");
+            user.setPassword("123456");
+            dao.insert(user);
+            
+            Contact contact = new Contact();
+            contact.setUserId(1);
+            contact.setContactId(2);
+            dao.insert(contact);
         }
 	}
 	
