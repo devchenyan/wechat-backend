@@ -31,11 +31,13 @@ public class UserModule {
 	@At
 	public Object login(@Param("name") String name, @Param("password") String password) {
 		User user = dao.fetch(User.class, Cnd.where("name", "=", name).and("password", "=", password));
+		NutMap map = new NutMap();
 		if (user == null) {
-			return false;
+			map.setv("ok", false).setv("id", 0);
 		}else {
-			return true;
+			map.setv("ok", true).setv("id", user.getId());
 		}
+		return map;
 	}
 	
 	@At
